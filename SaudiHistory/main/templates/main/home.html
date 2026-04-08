@@ -1,0 +1,148 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<main>
+    <!-- start home-->
+    <section id="home">
+     <div class="container">
+        
+        <span class="top-title">تاريخ المملكة العربية السعودية</span>
+        
+       <p class="description">
+         هنا نسرد تفاصيل المجد ونقتفي أثر القادة <br> 
+          بين طيات هذه الصفحات قصة وطنٍ توحد وتاريخٍ نُقش <span class="gold-text">بذهب</span>.
+        </p>  
+        
+        <div class="scroll-indicator"></div>
+        
+     </div>
+   </section>
+    <!-- end home-->
+
+
+<!--start overview-->
+
+   <section id="overview" class="history-section">
+    <div class="container">
+        <h2 class="main-section-title">نظرة عامة</h2>
+        
+        <div class="overview-content">
+            <p class="description">
+                مرحباً بك في رحلة عبر الزمن.. <br>
+                هنا سنحكي لك كيف بدأت قصة السعودية، ونعرفك على الملوك الأبطال الذين بنوا هذا الوطن العظيم. 
+                سنبدأ معك من أول خطوة في "الدرعية" وحتى وصلنا اليوم إلى أحلامنا الكبيرة في "رؤية 2030". <br>
+                استعد.. فأنت على وشك قراءة قصة فخر كُتبت بذهب.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--end overview-->
+
+<section id="rulers" class="history-section">
+    <div class="container tree-container">
+        <h2 class="main-section-title">شجرة الملوك</h2>
+        
+        <div class="timeline-tree">
+
+            <div class="king-node-founder-node">
+                <div class="openModal">
+                    <a href="#king-abdulaziz" class="king-link">
+                    <div class="king-image-wrapper founder-img">
+                        <img src="/static/images/king1.jpg" alt="الملك عبدالعزيز">
+                    </div>
+                    <h3 class="king-name">الملك عبدالعزيز بن عبدالرحمن</h3>
+                   </a>
+                </div>
+            </div>
+            <div class="modal">
+                <div class="model-inner" >
+                <a href="" class="closeModal">
+                    <span class="material-symbols-outlined">
+                        close
+                     </span>
+                </a>
+                <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+            </div>
+
+            </div>
+            
+            <div class="king-node-right">
+                <div class="tree-dot"></div>
+                <a href="#king-saud" class="king-link">
+                    <div class="king-image-wrapper">
+                        <img src="/static/images/king2.jpg" alt="الملك سعود">
+                    </div>
+                    <h3 class="king-name">الملك سعود بن عبدالعزيز</h3>
+                </a>
+            </div>
+
+            <div class="king-node-left">
+                <div class="tree-dot"></div>
+                <a href="#king-faisal" class="king-link">
+                    <div class="king-image-wrapper">
+                        <img src="\static\images\king3.jpg" alt="الملك فيصل">
+                    </div>
+                    <h3 class="king-name">الملك فيصل بن عبدالعزيز</h3>
+                </a>
+            </div>
+
+            <div class="king-node-right">
+                <div class="tree-dot"></div>
+                <a href="#king-khaled" class="king-link">
+                    <div class="king-image-wrapper">
+                        <img src="/static/images/king7.jpg" alt="الملك خالد">
+                    </div>
+                    <h3 class="king-name">الملك خالد بن عبدالعزيز</h3>
+                </a>
+            </div>
+
+            <div class="king-node-left">
+                <div class="tree-dot"></div>
+                <a href="#king-fahad" class="king-link">
+                    <div class="king-image-wrapper">
+                        <img src="/static/images/king4.jpg" alt="الملك فهد">
+                    </div>
+                    <h3 class="king-name">الملك فهد بن عبدالعزيز</h3>
+                </a>
+            </div>
+
+            <div class="king-node-right">
+                <div class="tree-dot"></div>
+                <a href="#king-abdullah" class="king-link">
+                    <div class="king-image-wrapper">
+                        <img src="/static/images/king5.jpg" alt="الملك عبدالله">
+                    </div>
+                    <h3 class="king-name">الملك عبدالله بن عبدالعزيز</h3>
+                </a>
+            </div>
+
+            <div class="king-node-left">
+                <div class="tree-dot"></div>
+                <a href="#king-salman" class="king-link">
+                    <div class="king-image-wrapper">
+                        <img src="/static/images/king6.jpg" alt="الملك سلمان">
+                    </div>
+                    <h3 class="king-name">الملك سلمان بن عبدالعزيز</h3>
+                </a>
+            </div>
+
+        </div>
+    </div>
+<!--king card start-->
+
+</section>
+
+
+</main>
+
+{% endblock %}
