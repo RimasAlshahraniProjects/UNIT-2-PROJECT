@@ -23,6 +23,11 @@
     --font-body: "Amiri", serif;  
 }
 
+body
+{
+    background: linear-gradient( #200016, #10001f );
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -39,11 +44,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background-color: black;
     position: fixed;
     width: 100%;
     top: 0;
-    border-bottom: 1px solid var(--btn-text);
     z-index: 1000;
 }
 
@@ -100,40 +103,93 @@
 
 /* navbar styling end */
 
+
+/* home styling start */
+
 #home {
-    min-height: 100vh; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    padding-top: 80px; 
+   
+    background: linear-gradient( #200016, #10001f );
+    overflow: hidden;
+}
+ 
+
+
+
+#home-images
+{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
-.top-title {
+#home-images::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    background: linear-gradient(to top, #200016, transparent);
+    
+   
+    z-index: 9999;          
+    pointer-events: none;  
+    
+}
+
+
+#home-images img
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;    
+}
+
+#moon2
+{
+    mix-blend-mode: screen;
+    transform: translateY(9px);
+
+}
+
+#horse6 {
+    width: 350px !important; 
+    height: auto !important;
+    position: absolute;      
+    object-fit: contain !important; 
+    top: 50%;   
+    left: 35%;
+}
+
+
+#falcon7 {
+    width: 150px !important;  
+    height: auto !important;  
+    position: absolute;       
+    object-fit: contain !important;
+    top: 45%;    
+    left: 30%;  
+    z-index: 10;  
+}
+
+.home-txt {
+    position: absolute;
+    text-align: center; 
+    transform: translateY(240px);       
+    width: 100%;            
+    z-index: 1000;          
+    display: block;
+    color: var(--btn-text);
+    line-height: 2;
     font-family: var(--font-title);
-    font-size: 2rem;
-    color: var(--title-color); 
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-    opacity: 0.9;
 }
 
 
 
-.description {
-    font-family: var(--font-body);
-    font-size: clamp(1.2rem, 2vw, 2.2rem);
-    color: var(--text-color);
-    max-width: 800px;
-    line-height: 1.5; 
-    margin-bottom: 40px;
-    opacity: 0.9;
-}
 
-.gold-text {
-    color: #D4AF37; 
-    font-weight: bold;
-    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
-}
+/* home styling end */
 
 .history-section {
     min-height: 100vh; 
@@ -145,8 +201,8 @@
     justify-content: center;
     padding: 80px 20px;
     overflow: hidden;
-    background-image: url(/static/images/secation_bc.jpg);
-    background-color: rgba(0, 0, 0, 0.4);
+    /*background-image: url(/static/images/secation_bc.jpg);*/
+    /*background-color: rgba(0, 0, 0, 0.4);*/
     background-blend-mode: overlay;
     background-size: cover;        
     background-position: center;   
@@ -161,146 +217,174 @@
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); 
 }
 
-/* --- 1. حاوية الصور (Wrapper) لضمان الدائرية المطلقة --- */
-.king-image-wrapper {
-    width: 150px;           /* عرض ثابت */
-    height: 150px;          /* طول ثابت يساوي العرض */
-    border-radius: 50%;     /* السر الحقيقي للدائرة */
-    border: 3px solid var(--title-color); /* الإطار الذهبي */
-    overflow: hidden;       /* لإجبار الصورة داخلها على الانحناء */
+/* rulers styling start */
+
+.timeline
+{
     position: relative;
-    background: #1a1a1a;    /* خلفية احتياطية */
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); /* توهج ملكي */
-    transition: all 0.4s ease;
+    max-width: 1200px;
+    margin: 100px auto;
+    
 }
-
-/* للمؤسس: نجعل دائرته أكبر وأفخم */
-.founder-img {
-    width: 220px;
-    height: 220px;
-    border-width: 5px;
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
-}
-
-/* --- 2. تنسيق الصورة داخل الدائرة --- */
-.king-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;      /* أهم خاصية: تمنع تمطط الصورة وتملأ الدائرة بذكاء */
-    filter: grayscale(30%); /* لمسة تاريخية هادئة */
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-/* --- 3. تأثيرات الرابط عند التمرير (Hover) --- */
-.king-link:hover .king-image-wrapper {
-    border-color: #ffffff;  /* يتحول الإطار للأبيض الساطع عند الاختيار */
-    transform: scale(1.05); /* تكبير بسيط جداً يعطي إحساساً بالتفاعل */
-    box-shadow: 0 0 30px var(--title-color);
-}
-
-.king-link:hover img {
-    filter: grayscale(0%);  /* تعود الألوان الطبيعية للصورة عند الإشارة إليها */
-    transform: scale(1.1);  /* زووم بسيط داخل الدائرة */
-}
-
-/* --- 4. تنسيق اسم الملك تحت الدائرة --- */
-.king-name {
-    color: #ffffff;
-    margin-top: 15px;
-    font-family: var(--font-title);
-    font-size: 1.3rem;
-    text-align: center;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-    transition: color 0.3s ease;
-}
-
-.king-link:hover .king-name {
-    color: var(--title-color); /* يتغير الاسم للذهبي عند التمرير */
-}
-
-
-
-
-
-/* hgw,v*/
-
-.king-node-left
+.container1
 {
-    padding-right: 15rem;
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+    
+}
+.container1:nth-child(1){
+    animation-delay: 0s;
 }
 
-.king-node-right
+.container1:nth-child(2){
+    animation-delay: 1s;
+}
+.container1:nth-child(3){
+    animation-delay: 2s;
+}
+
+.container1:nth-child(4){
+    animation-delay: 3s;
+}
+.container1:nth-child(5){
+    animation-delay: 4s;
+}
+
+.container1:nth-child(6){
+    animation-delay: 5s;
+}
+
+.container1:nth-child(7){
+    animation-delay: 7s;
+}
+
+@keyframes movedown
 {
-    padding-left: 15rem;
+    0%
+    {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    
 }
 
-.king-node-founder-node  
+.text-box
 {
-    padding-right: 8rem;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
 }
 
-.king-node-founder-node  h3
+.lfte-container
 {
-    padding-left: 6rem;
+    right: 0;
 }
 
-/* line*/
-/* 1. إعداد حاوية الشجرة الأساسية */
-.timeline-tree {
-    position: relative; /* ضروري لعمل الـ Absolute Positioning للخط */
-    max-width: 1400px;  /* عرض مريح يتناسب مع مسافات الـ 15rem */
-    margin: 0 auto;
+.right-container
+{
+    right: 50%;
+
 }
 
-/* 2. رسم الخط المركزي (ساق الشجرة) */
-.timeline-tree::after {
+
+
+.container1 img
+{
+    position: absolute;
+    width: 50px;           
+    aspect-ratio: 1 / 1;    
+    border-radius: 50%;     
+    object-fit: cover;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+
+.lfte-container img
+{
+    right: auto; 
+    left: -20px;
+
+}
+
+.timeline::after {
     content: '';
     position: absolute;
-    
-    /* عرض الخط */
-    width: 2px; 
-    
-    /* تدرج ذهبي فخم يتلاشى في الأطراف */
-    background: linear-gradient(to bottom, 
-                transparent 0%, 
-                var(--title-color) 10%, 
-                var(--title-color) 90%, 
-                transparent 100%);
-    
-    /* مكان الخط */
-    left: 50%;
-    transform: translateX(-50%);
-    
-    /* بداية ونهاية الخط */
-    top: 250px; /* يبدأ الخط من تحت صورة الملك عبدالعزيز */
-    bottom: 0;
-    
-    z-index: 1; /* ليكون خلف الصور */
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); /* توهج بسيط للخط */
-}
-
-
-/* dsing to card*/
-
-.modal {
-
-    opacity: 0;
-    position:fixed;
+    width: 6px;
+    height: 100%;
+    background: #ffffff;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; 
-    transition: all 0.3s ease-in-out;
+    /* نستخدم left: 50% مع margin-left بالسالب لضمان التوسط الحسابي */
+    left: 50%;
+    margin-left: -3px;
     z-index: -1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    animation: moveline 6s linear forwards;
+}
+@keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%
+    {
+        height: 100%;
+    }
+    
 }
 
-.modal .open
+.text-box
 {
-    opacity: 1;
-    z-index: 999;
+
 }
+
+.text-box small
+{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+
+
+/* تأكد من المسافة هنا بين and والقوس */
+@media screen and (max-width: 600px) {
+    
+    .timeline::after {
+        left: 31px !important; /* تحريك الخط لليسار */
+        margin-left: 0 !important;
+    }
+
+    .container1 {
+        width: 100% !important; /* الصناديق تأخذ كامل العرض */
+        padding-left: 70px !important; /* ترك مسافة للخط والصورة */
+        padding-right: 25px !important;
+        right: auto !important; /* إلغاء التموضع القديم */
+        left: 0 !important;
+    }
+
+    .right-container {
+        left: 0 !important; /* محاذاة كل الصناديق لتبدأ من اليسار */
+    }
+
+    .container1 img {
+        width: 40px !important;
+        left: 10px !important; /* وضع الصورة فوق الخط (31px) */
+        right: auto !important;
+    }
+
+    /* لضمان أن النصوص لا تخرج عن الشاشة */
+    .text-box {
+        padding: 15px !important;
+        font-size: 13px !important;
+    }
+}
+/* rulers styling end */

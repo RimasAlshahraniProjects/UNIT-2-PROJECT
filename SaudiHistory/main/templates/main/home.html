@@ -5,21 +5,32 @@
 {% block content %}
 <main>
     <!-- start home-->
-    <section id="home">
-     <div class="container">
-        
-        <span class="top-title">تاريخ المملكة العربية السعودية</span>
-        
-       <p class="description">
-         هنا نسرد تفاصيل المجد ونقتفي أثر القادة <br> 
+<section id="home">
+     <section id="home-images">
+    <img src="{% static 'images/stars1.png' %}" alt="Stars" id="Stars">
+
+    <div class="home-txt">
+        <h2 class="top-title"> تاريخ المملكة العربية السعودية </h2>
+        <p class="description">
+            هنا نسرد تفاصيل المجد ونقتفي أثر القادة 
           بين طيات هذه الصفحات قصة وطنٍ توحد وتاريخٍ نُقش <span class="gold-text">بذهب</span>.
-        </p>  
-        
-        <div class="scroll-indicator"></div>
-        
-     </div>
-   </section>
+        </p>
+    </div>
+
+    <img src="{% static 'images\moon2.png' %}" alt="moon" id="moon2">
+    <img src="{% static 'images\mountains3.png' %}" alt="mountains" id="mountains3">
+    <img src="{% static 'images\mountains4.png' %}" alt="mountains" id="mountains4">
+    <img src="{% static 'images\land5.png' %}" alt="land" id="land5">
+    <img src="{% static 'images\horse6.png' %}" alt="horse" id="horse6">
+    <img src="{% static 'images\falcon7.webp' %}" alt="falcon" id="falcon7">
+    <img src="{% static 'images\mountains9.png' %}" alt="mountains" id="mountains9">
+   
+    </section>
+
+</section>
+   
     <!-- end home-->
+
 
 
 <!--start overview-->
@@ -41,106 +52,94 @@
 
 <!--end overview-->
 
-<section id="rulers" class="history-section">
-    <div class="container tree-container">
-        <h2 class="main-section-title">شجرة الملوك</h2>
-        
-        <div class="timeline-tree">
 
-            <div class="king-node-founder-node">
-                <div class="openModal">
-                    <a href="#king-abdulaziz" class="king-link">
-                    <div class="king-image-wrapper founder-img">
-                        <img src="/static/images/king1.jpg" alt="الملك عبدالعزيز">
-                    </div>
-                    <h3 class="king-name">الملك عبدالعزيز بن عبدالرحمن</h3>
-                   </a>
-                </div>
-            </div>
-            <div class="modal">
-                <div class="model-inner" >
-                <a href="" class="closeModal">
-                    <span class="material-symbols-outlined">
-                        close
-                     </span>
-                </a>
-                <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-            </div>
+<!-- start rulers -->
+ <section id="rulers" class="timeline">
 
-            </div>
-            
-            <div class="king-node-right">
-                <div class="tree-dot"></div>
-                <a href="#king-saud" class="king-link">
-                    <div class="king-image-wrapper">
-                        <img src="/static/images/king2.jpg" alt="الملك سعود">
-                    </div>
-                    <h3 class="king-name">الملك سعود بن عبدالعزيز</h3>
-                </a>
-            </div>
-
-            <div class="king-node-left">
-                <div class="tree-dot"></div>
-                <a href="#king-faisal" class="king-link">
-                    <div class="king-image-wrapper">
-                        <img src="\static\images\king3.jpg" alt="الملك فيصل">
-                    </div>
-                    <h3 class="king-name">الملك فيصل بن عبدالعزيز</h3>
-                </a>
-            </div>
-
-            <div class="king-node-right">
-                <div class="tree-dot"></div>
-                <a href="#king-khaled" class="king-link">
-                    <div class="king-image-wrapper">
-                        <img src="/static/images/king7.jpg" alt="الملك خالد">
-                    </div>
-                    <h3 class="king-name">الملك خالد بن عبدالعزيز</h3>
-                </a>
-            </div>
-
-            <div class="king-node-left">
-                <div class="tree-dot"></div>
-                <a href="#king-fahad" class="king-link">
-                    <div class="king-image-wrapper">
-                        <img src="/static/images/king4.jpg" alt="الملك فهد">
-                    </div>
-                    <h3 class="king-name">الملك فهد بن عبدالعزيز</h3>
-                </a>
-            </div>
-
-            <div class="king-node-right">
-                <div class="tree-dot"></div>
-                <a href="#king-abdullah" class="king-link">
-                    <div class="king-image-wrapper">
-                        <img src="/static/images/king5.jpg" alt="الملك عبدالله">
-                    </div>
-                    <h3 class="king-name">الملك عبدالله بن عبدالعزيز</h3>
-                </a>
-            </div>
-
-            <div class="king-node-left">
-                <div class="tree-dot"></div>
-                <a href="#king-salman" class="king-link">
-                    <div class="king-image-wrapper">
-                        <img src="/static/images/king6.jpg" alt="الملك سلمان">
-                    </div>
-                    <h3 class="king-name">الملك سلمان بن عبدالعزيز</h3>
-                </a>
-            </div>
-
+    <div class="container1 lfte-container">
+        <img src="{% static 'images/king1.jpg'%}" alt="">
+        <div class="text-box">
+            <h1> الملك عبدالعزيز ال سعودي</h1>
+            <small>2001-2003</small>
+            <p> نبذه عن الملك </p>
+            <button><a href=""> ابحر اكثر</a></button>
         </div>
     </div>
-<!--king card start-->
 
-</section>
+    <div class="container1 right-container">
+        <img src="{% static 'images/king2.jpg'%}" alt="">
+        <div class="text-box">
+            <h1> الملك عبدالعزيز ال سعودي</h1>
+            <small>2001-2003</small>
+            <p> نبذه عن الملك </p>
+            <button><a href=""> ابحر اكثر</a></button>
+        </div>
+    </div>
+
+    <div class="container1 lfte-container">
+        <img src="{% static 'images/king3.jpg'%}" alt="">
+        <div class="text-box">
+            <h1> الملك عبدالعزيز ال سعودي</h1>
+            <small>2001-2003</small>
+            <p> نبذه عن الملك </p>
+            <button><a href=""> ابحر اكثر</a></button>
+        </div>
+    </div>
+
+    <div class="container1 right-container">
+        <img src="{% static 'images/king4.jpg'%}" alt="">
+        <div class="text-box">
+            <h1> الملك عبدالعزيز ال سعودي</h1>
+            <small>2001-2003</small>
+            <p> نبذه عن الملك </p>
+            <button><a href=""> ابحر اكثر</a></button>
+        </div>
+    </div>
+
+    <div class="container1 lfte-container">
+          <img src="{% static 'images/king5.jpg'%}" alt="">
+        <div class="text-box">
+            <h1> الملك عبدالعزيز ال سعودي</h1>
+            <small>2001-2003</small>
+            <p> نبذه عن الملك </p>
+            <button><a href=""> ابحر اكثر</a></button>
+        </div>
+    </div>
+
+    <div class="container1 right-container">
+          <img src="{% static 'images/king6.jpg'%}" alt="">
+        <div class="text-box">
+            <h1> الملك عبدالعزيز ال سعودي</h1>
+            <small>2001-2003</small>
+            <p> نبذه عن الملك </p>
+            <button><a href=""> ابحر اكثر</a></button>
+        </div>
+    </div>
+
+    <div class="container1 lfte-container">
+          <img src="{% static 'images/king7.jpg'%}" alt="">
+        <div class="text-box">
+            <h1> الملك عبدالعزيز ال سعودي</h1>
+            <small>2001-2003</small>
+            <p> نبذه عن الملك </p>
+            <button><a href=""> ابحر اكثر</a></button>
+        </div>
+    </div>
+
+
+
+ </section>
+
+
+<!-- end rulers -->
+
+
+<!-- start  foundation -->
+ 
+
+
+<!-- end foundation -->
+
 
 
 </main>
