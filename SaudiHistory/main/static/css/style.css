@@ -177,61 +177,76 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 15px 8%; /* تقليل البادينج قليلاً لتبدو أنحف وأرقى */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    
+    transition: all 0.4s ease;
 }
 
 .nav-logo {
     width: 65px;
     height: auto;
+    filter: drop-shadow(0 0 5px rgba(226, 193, 101, 0.4)); /* توهج ذهبي بسيط للشعار */
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
 }
 
 .nav-links ul {
     display: flex;
     list-style: none;
     gap: 45px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
     text-decoration: none;
     font-family: 'Amiri', serif;
-    color:#e9ecef;
+    color: var(--color-accent-gold); 
     font-size: 1.15rem;
     position: relative;
     transition: color 0.3s ease;
 }
 
+/* الخط الذهبي تحت الروابط */
 .nav-links a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 1px;
+    height: 2px; 
     bottom: -5px;
     right: 0;
-    background-color:var(--btn-color);
+    background-color: var(--color-accent-gold); 
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--btn-color);
+    color: var(--color-text-main);
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
+
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px 5%;
+    }
     .nav-logo {
         width: 50px;
     }
     .nav-links ul {
-        gap: 20px;
+        gap: 15px;
     }
     .nav-links a {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 }
 
@@ -311,17 +326,59 @@ a{
 .home-txt {
     position: absolute;
     text-align: center; 
-    transform: translateY(240px);       
+    /* تحسين التموضع ليكون متوازناً في المنتصف */
+    top: 50%;
+    transform: translateY(-50%); 
     width: 100%;            
-    z-index: 1000;          
+    z-index: 10;          
     display: block;
-    color: var(--btn-text);
-    line-height: 2;
-    font-family: var(--font-title);
+    
+    /* استخدام متغيراتكِ المعتمدة */
+    color: var(--color-title);
+    line-height: 1.8;
+    font-family: 'Amiri', serif;
+    
+    /* إضافة أنيميشن الظهور التدريجي */
+    animation: fadeInUp 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-txt h1 {
+    font-size: 3.5rem;
+    color: var(--color-accent-gold);
+    /* توهج ذهبي خفيف خلف العنوان ليعطيه هيبة */
+    text-shadow: 0 0 15px rgba(226, 193, 101, 0.4);
+    margin-bottom: 10px;
+}
+
+.home-txt p {
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    letter-spacing: 1px;
+}
+
+/* --- أنيميشن الظهور من الأسفل --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+        filter: blur(0);
+    }
 }
 
 
-
+@media (max-width: 768px) {
+    .home-txt h1 {
+        font-size: 2.2rem;
+    }
+    .home-txt p {
+        font-size: 1.1rem;
+    }
+}
 
 /* home styling end */
 
@@ -350,111 +407,81 @@ a{
 }
 
 /* rulers styling start */
-
-.timeline
-{
+.timeline {
     position: relative;
     max-width: 1200px;
     margin: 100px auto;
-    
 }
-.container1
-{
+
+.container1 {
     padding: 10px 50px;
     position: relative;
     width: 50%;
     animation: movedown 1s linear forwards;
     opacity: 0;
-    
-}
-.container1:nth-child(1){
-    animation-delay: 0s;
 }
 
-.container1:nth-child(2){
-    animation-delay: 1s;
-}
-.container1:nth-child(3){
-    animation-delay: 2s;
-}
+/* استهداف تأخير الأنيميشن لكل عنصر */
+.container1:nth-child(1) { animation-delay: 0s; }
+.container1:nth-child(2) { animation-delay: 1s; }
+.container1:nth-child(3) { animation-delay: 2s; }
+.container1:nth-child(4) { animation-delay: 3s; }
+.container1:nth-child(5) { animation-delay: 4s; }
+.container1:nth-child(6) { animation-delay: 5s; }
+.container1:nth-child(7) { animation-delay: 7s; }
 
-.container1:nth-child(4){
-    animation-delay: 3s;
-}
-.container1:nth-child(5){
-    animation-delay: 4s;
-}
-
-.container1:nth-child(6){
-    animation-delay: 5s;
-}
-
-.container1:nth-child(7){
-    animation-delay: 7s;
-}
-
-@keyframes movedown
-{
-    0%
-    {
-        opacity: 1;
+@keyframes movedown {
+    0% {
+        opacity: 0; /* تم تعديلها لـ 0 لضمان ظهور الأنيميشن بسلاسة */
         transform: translateY(-30px);
     }
-    100%
-    {
+    100% {
         opacity: 1;
         transform: translateY(0px);
     }
-
-    
 }
 
-.text-box
-{
+.text-box {
     padding: 20px 30px;
-    background-color: var(--bg-textbox);
-    color: var(--title-color1);
-    font-family: var(--font-body);
+    /* --- تعديل الألوان والخطوط --- */
+    background-color: var(--bg-textbox); /* الأرجواني الشفاف الخاص بكِ */
+    color: var(--color-text-main); /* الأبيض المريح للعين */
+    font-family: 'Cairo', sans-serif; /* الخط الأساسي */
     text-align: center;
-    border: var(--border-textbox);
+    border: 1px solid var(--border-textbox); /* حدود ذهبية شفافة */
     box-shadow: var(--shadow-textbox);
     position: relative;
     border-radius: 6px;
     font-size: 15px;
 }
 
-.lfte-container
-{
-    right: 0;
+/* تمييز العناوين داخل الصناديق بالذهبي */
+.text-box h2 {
+    color: var(--color-accent-gold);
+    font-family: 'Amiri', serif;
+    margin-bottom: 10px;
 }
 
-.right-container
-{
-    right: 50%;
+.lfte-container { right: 0; }
+.right-container { right: 50%; }
 
-}
-
-
-
-.container1 img
-{
+.container1 img {
     position: absolute;
     width: 50px;           
     aspect-ratio: 1 / 1;    
-    border-radius: 50%;     
+    border-radius: 50%;    
     object-fit: cover;
     right: -20px;
     top: 32px;
     z-index: 10;
-    box-shadow: 0 0 15px rgba(192, 192, 192, 0.2), 
-                0 5px 15px rgba(0, 0, 0, 0.3);
+    /* --- تعديل إطار الصورة وتوهجها --- */
+    border: 2px solid var(--color-accent-gold);
+    box-shadow: 0 0 15px rgba(226, 193, 101, 0.4);
 }
 
-.lfte-container img
-{
+.lfte-container img {
     right: auto; 
     left: -20px;
-
 }
 
 .timeline::after {
@@ -462,68 +489,57 @@ a{
     position: absolute;
     width: 6px;
     height: 100%;
-    background: var(--color-divider);
+    /* --- تعديل لون الخط الفاصل للذهبي --- */
+    background: var(--color-divider); 
     top: 0;
-    /* نستخدم left: 50% مع margin-left بالسالب لضمان التوسط الحسابي */
     left: 50%;
     margin-left: -3px;
     z-index: -1;
     animation: moveline 6s linear forwards;
 }
+
 @keyframes moveline {
-    0%{
-        height: 0;
-    }
-    100%
-    {
-        height: 100%;
-    }
-    
+    0% { height: 0; }
+    100% { height: 100%; }
 }
 
-.text-box
-{
-
-}
-
-.text-box small
-{
+.text-box small {
     display: inline-block;
     margin-bottom: 15px;
+    /* --- تلوين التاريخ بالذهبي --- */
+    color: var(--color-accent-gold);
+    font-weight: bold;
 }
 
-
-
-/* تأكد من المسافة هنا بين and والقوس */
+/* --- الاستجابة للجوال (تعديل الألوان فقط) --- */
 @media screen and (max-width: 600px) {
-    
     .timeline::after {
-        left: 31px !important; /* تحريك الخط لليسار */
+        left: 31px !important;
         margin-left: 0 !important;
     }
 
     .container1 {
-        width: 100% !important; /* الصناديق تأخذ كامل العرض */
-        padding-left: 70px !important; /* ترك مسافة للخط والصورة */
+        width: 100% !important;
+        padding-left: 70px !important;
         padding-right: 25px !important;
-        right: auto !important; /* إلغاء التموضع القديم */
+        right: auto !important;
         left: 0 !important;
     }
 
     .right-container {
-        left: 0 !important; /* محاذاة كل الصناديق لتبدأ من اليسار */
+        left: 0 !important;
     }
 
     .container1 img {
         width: 40px !important;
-        left: 10px !important; /* وضع الصورة فوق الخط (31px) */
+        left: 10px !important;
         right: auto !important;
     }
 
-    /* لضمان أن النصوص لا تخرج عن الشاشة */
     .text-box {
         padding: 15px !important;
         font-size: 13px !important;
+        border-color: var(--border-textbox) !important;
     }
 }
 /* rulers styling end */
@@ -531,26 +547,6 @@ a{
 
 /* king page styling start */
 
-.king-card
-{
-    background-color: var(--box-color);
-    color: var(--title-color1);
-    font-family: var(--font-body);
-    border: 1px solid rgba(192, 192, 192, 0.4);
-    box-shadow: 0 0 15px rgba(192, 192, 192, 0.2), 
-                0 5px 15px rgba(0, 0, 0, 0.3);
-    
-}
-
-.col-md-4
-{
-    padding: 10px;
-    
-}
-.col-md-8
-{
-    font-size: 1.2rem;
-}
 .pg-titl
 {
     
@@ -598,24 +594,7 @@ a{
     }
 }
 
-#king1-physical .pg-titl
-{
-   padding-bottom: 20px;
-}
 
-.card
-{
-     background-color: var(--box-color); 
-    border: 1px solid rgba(192, 192, 192, 0.4) !important; 
-    box-shadow: 0 0 15px rgba(192, 192, 192, 0.2), 
-                0 5px 15px rgba(0, 0, 0, 0.3)!important; 
-}
-
-.card-title
-{
-    color: var(--title-color1);
-      font-family: var(--font-body);
-}
 
 
 .card-title {
@@ -656,72 +635,204 @@ a{
     }
 }
 
-/* حاوية التمرير العرضي */
-.stories-scroll-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 20px 10px;
-    scrollbar-width: thin; /* للمتصفحات الحديثة */
-    scrollbar-color: var(--color-accent-gold) transparent;
-    scroll-behavior: smooth;
-}
-
-/* تخصيص شكل الـ Scrollbar للمتصفحات مثل Chrome */
-.stories-scroll-container::-webkit-scrollbar {
-    height: 6px;
-}
-.stories-scroll-container::-webkit-scrollbar-thumb {
-    background: var(--color-accent-gold);
-    border-radius: 10px;
-}
-
-/* تصميم كارد القصة */
-.story-card {
-    min-width: 300px;
-    max-width: 300px;
-    background: var(--bg-textbox); /* الأرجواني الشفاف */
-    border: 1px solid var(--border-textbox);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 25px;
-    position: relative;
-    transition: transform 0.3s ease;
-    box-shadow: var(--shadow-textbox);
-}
-
-.story-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--color-accent-gold);
-}
-
-/* أيقونة الاقتباس */
-.story-icon {
-    font-size: 50px;
-    color: var(--color-accent-gold);
-    opacity: 0.3;
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    font-family: serif;
-}
-
-.story-text {
-    color: var(--color-text-main);
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    font-style: italic;
-}
-
-.story-author {
-    color: var(--color-accent-gold);
-    font-weight: 600;
-    text-align: left; /* لجعل الاسم في جهة والقصة في جهة */
-    font-size: 0.9rem;
-}
-
 
 
 
 /* king page styling end */
+
+/* start foundation */
+
+/* تنسيق نصوص الكاروسيل لتكون واضحة فوق الصور الفاتحة */
+.carousel-caption h5 {
+    color: #1a1a1a; /* أسود فحمي غامق */
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    /* ظل خفيف جداً أبيض ليبرز النص إذا كانت الصورة رمادية */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.carousel-caption p {
+    color: #333333; /* رمادي غامق جداً مريح للعين */
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* تنسيق الأزرار داخل الكاروسيل لتبرز فوق البياض */
+.carousel-caption button {
+    margin-top: 15px;
+    border: 1px solid #1a1a1a;
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.carousel-caption button:hover {
+    background: transparent;
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+/* end foundation */
+
+
+
+/* --- العنوان الرئيسي مع أنيميشن هادئ --- */
+.pg-titl {
+    font-family: 'Amiri', serif;
+    color: var(--color-accent-gold);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* --- تنسيق الـ Card الموحد --- */
+.card {
+    background: var(--bg-textbox) !important;
+    border: 1px solid var(--border-textbox) !important;
+    box-shadow: var(--shadow-textbox);
+    border-radius: 15px !important;
+    backdrop-filter: blur(10px); /* تأثير زجاجي فخم */
+    transition: transform var(--transition-speed), border-color var(--transition-speed);
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.03); /* تكبير بسيط */
+    border-color: var(--color-accent-gold) !important;
+}
+
+.card-title, .card-body {
+    color: var(--color-text-main) !important;
+}
+
+.card-title {
+    color: var(--color-accent-gold) !important;
+    font-weight: 700;
+}
+
+/* --- تنسيق الصور بداخل البطاقات --- */
+.img-fluid {
+    transition: transform var(--transition-speed);
+    filter: brightness(0.8);
+}
+
+/* --- الأقسام والفواصل --- */
+.center-section {
+    padding: 40px 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.center-section:last-child {
+    border-bottom: none;
+}
+
+/* --- الروابط والمصادر --- */
+.card-link {
+    color: var(--color-accent-gold) !important;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.card-link:hover {
+    border-bottom-color: var(--color-accent-gold);
+}
+
+/* --- تأثيرات الظهور (Keyframes) --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* الأرقام والتواريخ */
+small, .date-text {
+    color: var(--color-text-main);
+    opacity: 0.7;
+    display: block;
+    text-align: center;
+}
+
+
+/* تنسيق زر عصر الوحدة (والأزرار المشابهة) */
+.btn-gold {
+    background-color: transparent;
+    color: var(--color-accent-gold) !important; /* اللون الذهبي للنص */
+    border: 1px solid var(--color-accent-gold) !important; /* حدود ذهبية */
+    font-family: 'Amiri', serif;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* تأثير مرور الماوس (Hover) */
+.btn-gold:hover {
+    background-color: var(--color-accent-gold) !important; /* يمتلئ بالذهبي */
+    color: #301934 !important; /* يتغير النص للأرجواني الغامق للتباين */
+    transform: translateY(-3px); /* رفعة بسيطة */
+    box-shadow: 0 5px 15px rgba(226, 193, 101, 0.4); /* توهج ذهبي */
+}
+
+
+
+.intro-book-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03); /* شفافية خفيفة جداً */
+    border-right: 3px solid var(--color-accent-gold); /* خيط ذهبي كأنه فاصل كتاب */
+    border-radius: 0 15px 15px 0;
+}
+
+.intro-text {
+    font-size: 1.4rem;
+    line-height: 2.2;
+    color: var(--color-text-main);
+    font-family: 'Amiri', serif; /* يعطي طابع القصص والتاريخ */
+}
+
+.feature-item p.small {
+    color: var(--color-text-main) !important; /* استخدام الأبيض المعتمد في مشروعك */
+    opacity: 0.85; /* شفافية بسيطة ليعطي عمقاً دون أن يختفي النص */
+    font-size: 0.95rem; /* كبرت الحجم قليلاً ليكون مريحاً للعين */
+    line-height: 1.6;
+}
+
+.feature-item {
+    padding: 20px;
+    background: var(--bg-textbox);
+    border: 1px solid var(--border-textbox);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.feature-item:hover {
+    border-color: var(--color-accent-gold);
+    transform: translateY(-5px);
+}
+
+.feature-item h5 {
+    color: var(--color-accent-gold);
+    margin: 15px 0 10px;
+}
+
+.gold-text {
+    color: var(--color-accent-gold) !important;
+    font-family: 'Amiri', serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    /* إضافة ظل خفيف جداً خلف النص ليعطيه عمقاً فوق الخلفية الأرجوانية */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+}
+

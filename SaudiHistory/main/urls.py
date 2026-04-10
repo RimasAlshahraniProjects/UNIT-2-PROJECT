@@ -6,7 +6,14 @@ app_name="main"
 
 urlpatterns=[
     path('', views.home_view, name="home_view"),
+
+    path('first-saudi-state/', views.state1_view, name="state1_view"),
+
+    path('second-saudi-state/', views.state2_view, name="state2_view"),
+
+    path('saudi-arabia-kingdom/', views.state3_view, name="state3_view"),
     
+
     path('king-abdulaziz/', views.king1_view, name="king1_view"),
 
     path('king-saud/', views.king2_view, name="king2_view"),

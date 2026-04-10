@@ -6,6 +6,17 @@ def home_view(request:HttpRequest) :
     return render(request, 'main/home.html')
 
 
+def state1_view(request: HttpRequest):
+    return render(request, 'main/first_saudi_state.html')
+
+def state2_view(request: HttpRequest):
+    return render(request, 'main/second_saudi_state.html')
+
+def state3_view(request: HttpRequest):
+    return render(request, 'main/saudi_arabia_kingdom.html')
+
+
+
 def king1_view(request:HttpRequest) :
     return render(request, 'main/king_abdulaziz.html')
 

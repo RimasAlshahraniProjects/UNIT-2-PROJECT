@@ -34,28 +34,109 @@
 
 
 <!--start overview-->
-
-   <section id="overview" class="history-section">
+<section id="overview" class="history-section">
     <div class="container">
-        <h2 class="main-section-title">نظرة عامة</h2>
+        <h2 class="pg-titl">بداية الرحلة..</h2>
         
-        <div class="overview-content">
-            <p class="description">
-                مرحباً بك في رحلة عبر الزمن.. <br>
-                هنا سنحكي لك كيف بدأت قصة السعودية، ونعرفك على الملوك الأبطال الذين بنوا هذا الوطن العظيم. 
-                سنبدأ معك من أول خطوة في "الدرعية" وحتى وصلنا اليوم إلى أحلامنا الكبيرة في "رؤية 2030". <br>
-                استعد.. فأنت على وشك قراءة قصة فخر كُتبت بذهب.
-            </p>
+        <div class="overview-content text-center">
+            <div class="intro-book-wrap">
+                <p class="description intro-text">
+                    بين دفتي هذا الموقع، نفتح لك فصلاً من فصول المجد؛ قصة وطنٍ لم يرضَ بغير النجوم مستقراً. 
+                    <br>
+                    سنبحر معك من <strong>قلب الدرعية</strong>، حيث وُضع حجر الأساس، مروراً بملحمة الصمود، ووصولاً إلى فجر التوحيد الذي جمع الشتات وصنع المعجزات.
+                </p>
+                
+                <div class="reader-guide mt-5">
+                    <h4 class="gold-text mb-4">ماذا ستكتشف في رحلتك؟</h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="feature-item">
+                                <i class="bi bi-book"></i>
+                                <h5>ثلاث دول</h5>
+                                <p class="small">تسلسل تاريخي يربط الماضي بالحاضر.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-item">
+                                <i class="bi bi-person-check"></i>
+                                <h5>ملوك وأبطال</h5>
+                                <p class="small">تعرف على سير الأئمة والملوك الذين صنعوا الفارق.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-item">
+                                <i class="bi bi-rocket-takeoff"></i>
+                                <h5>رؤية المستقبل</h5>
+                                <p class="small">كيف تتحول الأحلام اليوم إلى واقع في ٢٠٣٠.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
 <!--end overview-->
 
+<!-- start foundation -->
+<section id="foundation" class="center-section">
+    <div>
+        <h2 class="pg-titl">تاريخ الدولة السعودية: من التأسيس إلى الوحدة</h2>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/foundation/saudi-state-1.png' %}" class="card-img-top" alt="الدولة السعودية الأولى">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">الدولة السعودية الأولى</h5>
+                    <p class="card-text">
+                        فجر الوحدة الذي انبثق من الدرعية عام ١١٣٩هـ، حين وضع الإمام محمد بن سعود حجر الأساس لدولةٍ قامت على العدل والوحدة.
+                    </p>
+                    <a href="{% url 'main:state1_view' %}" class="btn btn-gold mt-auto">اعرف أكثر</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/foundation/saudi-state-2.png' %}" class="card-img-top" alt="الدولة السعودية الثانية">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">الدولة السعودية الثانية</h5>
+                    <p class="card-text">
+                        حقبة الصمود والوفاء، حين أعاد الإمام تركي بن عبدالله بناء الكيان السعودي عام ١٢٤٠هـ، مستعيداً الأمجاد في قلب الجزيرة العربية.
+                    </p>
+                    <a href="{% url 'main:state2_view' %}" class="btn btn-gold mt-auto">قصة الصمود</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/foundation/saudi-state-3.png' %}" class="card-img-top" alt="المملكة العربية السعودية">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">المملكة العربية السعودية</h5>
+                    <p class="card-text">
+                        عهد التوحيد والرخاء، ملحمة الملك عبدالعزيز -طيب الله ثراه- التي جمعت الشتات عام ١٣٥١هـ، لتبدأ مسيرة النهضة الشاملة.
+                    </p>
+                    <a href="{% url 'main:state3_view' %}" class="btn btn-gold mt-auto">عصر الوحدة</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- end foundation -->
 
 <!-- start rulers -->
- <section id="rulers" class="timeline">
 
+  <div id="rulers">
+        <h2 class="pg-titl">ملوك المملكة العربية السعودية</h2>
+    </div>
+
+ <section  class="timeline" >
+   
     <div class="container1 lfte-container">
         <img src="{% static 'images/king1.jpg'%}" alt="">
         <div class="text-box">
@@ -139,12 +220,6 @@
 
 <!-- end rulers -->
 
-
-<!-- start  foundation -->
- 
-
-
-<!-- end foundation -->
 
 
 
