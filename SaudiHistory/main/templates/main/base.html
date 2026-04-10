@@ -24,10 +24,10 @@
 
         <div class="nav-links">
             <ul>
-                <li><a href="#home">الرئسيه</a></li>
-                <li><a href="#overview">نظرة عامة</a></li>
-                <li><a href="#rulers">حكام المملكة</a></li>
-                <li><a href="#foundation">التأسيس</a></li>
+                <li><a href="{% url 'main:home_view' %}">الرئسيه</a></li>
+                <li><a href="{% url 'main:home_view' %}#overview">نظرة عامة</a></li>
+                <li><a href="{% url 'main:home_view' %}#rulers">حكام المملكة</a></li>
+                <li><a href="{% url 'main:home_view' %}#foundation">التأسيس</a></li>
             </ul>
         </div>
     </nav>

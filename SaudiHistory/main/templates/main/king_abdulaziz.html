@@ -1,0 +1,197 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<main>
+    <section id="king1" >
+
+        <section id="info" class="center-section">
+            <div class="container d-flex justify-content-center my-5">
+    <div class="card mb-3 king-card">
+        <div class="row g-0 align-items-center">
+
+            
+
+            <div class="col-md-4">
+                <img src="{% static 'images/king1/king1,1.jpg' %}" 
+                     class="img-fluid rounded-start king-img" 
+                     alt="جلالة الملك">
+            </div>
+            
+
+            <div class="col-md-8">
+                <h2 class="pg-titl">السيرة الرسمية</h2>
+                <div class="card-body text-end">
+                    <h5 class="card-title ">الاسم الكامل:</h5>
+                    <p class="card-text ">
+                       عبد العزيز بن عبد الرحمن بن فيصل آل سعود
+                    </p>
+                    <h5 class="card-title"> تاريخ الميلاد:</h5>
+                    <p class="card-text">
+                     19 ذو الحجة 1292هـ / 15 يناير 1876م.
+
+                    </p>
+
+                    <h5 class="card-title"> مكان الميلاد:</h5>
+                    <p class="card-text">
+                       الرياض - نجد
+                    </p>
+
+                    <h5 class="card-title"> النشأة:</h5>
+                    <p class="card-text">
+                       تلقى تعليمه الأول في الرياض، وعُرف عنه منذ صغره الذكاء المتقد والشجاعة، 
+            انتقل مع أسرته إلى الكويت في سن العاشرة، وهناك صقل مهاراته السياسية والعسكرية.
+    
+                    </p>
+                    <p class="card-text">
+                        <small class="text-body-secondary date-label">تاريخ التأسيس: ١٣٥١ هـ</small>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        </section>
+
+
+        <section id="king1-physical" class="center-section">
+            <h2 class="pg-titl">الصفات الشكلية</h2>
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/king1/king1,2.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/king1/king1,3.png' %}" class="d-block w-100" alt="...">
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+        </section>
+
+     <section id="achievements" class="center-section">
+    <h2 class="pg-titl">أبرز إنجازات الملك عبدالعزيز</h2>
+    
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 rounded-3">
+                    <img src="{% static 'images/king1/achieve1.jpg' %}" class="card-img-top rounded-top-3" alt="التوحيد والأمن" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-end">
+                        <h5 class="card-title fw-bold text-dark">التوحيد وإرساء الأمن</h5>
+                        <p class="card-text text-muted">
+                            نجح في توحيد البلاد تحت اسم "المملكة العربية السعودية"، وأرسى دعائم الأمن بتأسيس مدرسة الشرطة وخفر السواحل.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <small class="text-secondary">تاريخ التأسيس: ١٣٥١ هـ</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 rounded-3">
+                    <img src="{% static 'images/king1/achieve2.jpg' %}" class="card-img-top rounded-top-3" alt="التأسيس الإداري" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-end">
+                        <h5 class="card-title fw-bold text-dark">التأسيس الإداري والسياسي</h5>
+                        <p class="card-text text-muted">
+                            أنشأ مجلس الشورى ومجلس الوزراء، وأسس الوزارات السيادية مثل الخارجية، الدفاع، الداخلية، والمالية.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <small class="text-secondary">وزارة الخارجية: ١٣٤٩ هـ</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 rounded-3">
+                    <img src="{% static 'images/king1/achieve3.jpg' %}" class="card-img-top rounded-top-3" alt="اكتشاف النفط" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-end">
+                        <h5 class="card-title fw-bold text-dark">النهضة الاقتصادية</h5>
+                        <p class="card-text text-muted">
+                            شهد عهده اكتشاف النفط وتصدير أول شحنة عام ١٩٣٩م، كما أسس مؤسسة النقد العربي السعودي لتنظيم الوضع المالي.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <small class="text-secondary">أول شحنة نفط: ١٣٥٨ هـ</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 rounded-3">
+                    <img src="{% static 'images/king1/achieve4.jpg' %}" class="card-img-top rounded-top-3" alt="التعليم والنقل" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-end">
+                        <h5 class="card-title fw-bold text-dark">التعليم والبنية التحتية</h5>
+                        <p class="card-text text-muted">
+                            أسس مديرية المعارف وافتتح المدارس وابتعث الطلاب، كما دشن الخطوط السعودية وأول سكة حديد بالمملكة.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <small class="text-secondary">مديرية المعارف: ١٣٤٤ هـ</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 rounded-3">
+                    <img src="{% static 'images/king1/achieve5.jpg' %}" class="card-img-top rounded-top-3" alt="الحرمين الشريفين" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-end">
+                        <h5 class="card-title fw-bold text-dark">خدمة الحرمين الشريفين</h5>
+                        <p class="card-text text-muted">
+                            أولى عناية فائقة بشؤون الحج، وأسس مديرية الحج العامة، وبدأ في أولى مراحل توسعة الحرمين الشريفين.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pb-3">
+                        <small class="text-secondary">مديرية الحج: ١٣٦٥ هـ</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+       
+    </div> </div>
+
+    <section id="departure" class="center-section">
+        <h2 class="pg-titl">وفاته</h2>
+
+        <div class="card">
+            <div class="card-body text-end">
+            <h5 class="card-title">وفاة الملك عبدالعزيز</h5>
+            <p class="card-text">
+              انتقل المؤسس الملك عبدالعزيز بن عبدالرحمن آل سعود إلى جوار ربه في مدينة الطائف، يوم الاثنين 2 ربيع الأول 1373هـ الموافق 9 نوفمبر 1953م، ونُقل جثمانه إلى الرياض ليُدفن في مقبرة العود بعد مسيرة طويلة من الكفاح والبناء.
+            </p>
+    <p class="card-text">
+        <small>التاريخ: ٢ ربيع الأول ١٣٧٣ هـ / ٩ نوفمبر ١٩٥٣ م</small>
+    </p>
+</div>
+    </div>
+
+    </section>
+
+        
+
+    </section>
+</main>
+{% endblock %}
