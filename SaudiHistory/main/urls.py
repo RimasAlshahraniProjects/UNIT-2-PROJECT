@@ -27,4 +27,9 @@ urlpatterns=[
     path('king-abdullah/', views.king6_view, name="king6_view"),
     
     path('king-salman/', views.king7_view, name="king7_view"),
+
+
+    path("mode/light/", views.light_mode_view, name="light_mode_view"),
+    path("mode/dark/", views.dark_mode_view, name="dark_mode_view"),
+   
 ]

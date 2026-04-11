@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render ,redirect
 from django.http import HttpRequest, HttpResponse
 # Create your views here.
 
@@ -37,4 +37,15 @@ def king6_view(request: HttpRequest):
 
 def king7_view(request: HttpRequest):
     return render(request, 'main/king_salman.html')
+
+
+def light_mode_view(request: HttpRequest):
+    response = redirect("main:home_view")
+    response.set_cookie("mode", "light", max_age=60*60*24 )
+    return response
+
+def dark_mode_view(request: HttpRequest):
+    response = redirect("main:home_view") 
+    response.set_cookie("mode", "dark", max_age=-3600 )
+    return response
 

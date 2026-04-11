@@ -12,6 +12,9 @@
 
 }
 
+
+/* تأكدي: لا توجد مسافة بين html والنقطة */
+
 :root {
     /* ألوان النصوص */
     --color-title: #FFFFFF;          /* لون العنوان: أبيض ناصع للبروز */
@@ -836,3 +839,18 @@ small, .date-text {
     display: inline-block;
 }
 
+
+
+
+
+
+html.light_mode body {
+    background: #3D7EAE !important;
+   
+}
+
+
+html.light_mode #home
+{
+    background: #3D7EAE !important;
+}

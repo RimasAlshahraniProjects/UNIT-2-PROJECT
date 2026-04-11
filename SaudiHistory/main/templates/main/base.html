@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" {% if 'mode' in request.COOKIES %} class="light_mode" {% endif %}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +28,17 @@
                 <li><a href="{% url 'main:home_view' %}#overview">نظرة عامة</a></li>
                 <li><a href="{% url 'main:home_view' %}#foundation">التأسيس</a></li>
                 <li><a href="{% url 'main:home_view' %}#rulers">حكام المملكة</a></li>
+
+            <div class="mode">
+                 <a href="{% url 'main:dark_mode_view' %}">moon</a>
+                <a href="{% url 'main:light_mode_view' %}">sun</a>
+               
                 
+            </div>
+
             </ul>
         </div>
+        
     </nav>
 </header>
 
