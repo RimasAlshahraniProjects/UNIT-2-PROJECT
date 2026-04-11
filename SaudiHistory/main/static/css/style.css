@@ -953,3 +953,107 @@ html.light_mode main
 
 /* light_mode styling end*/
 
+
+
+/* ============================================================
+    QUIZ PAGE STYLING (Dark Luxury)
+   ============================================================ */
+
+.quiz-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.question-card {
+    background: var(--bg-textbox);
+    border: 1px solid var(--border-textbox);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+    text-align: right;
+}
+
+.question-card:hover {
+    border-color: var(--color-accent-gold);
+}
+
+.question-card h3 {
+    color: var(--color-accent-gold);
+    margin-bottom: 15px;
+    font-family: 'Amiri', serif;
+}
+
+.option-label {
+    display: block;
+    margin: 12px 0;
+    cursor: pointer;
+    color: var(--color-text-main);
+    font-size: 1.1rem;
+}
+
+/* Custom Radio Button Style */
+input[type="radio"] {
+    accent-color: var(--color-accent-gold);
+    margin-left: 10px;
+}
+
+/* Result Box Styling */
+#result-display {
+    border: 2px solid var(--color-accent-gold);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* الحاوية الكبرى */
+.hakawati-wrapper {
+    display: flex;
+    flex-direction: row; /* اليمين قصص واليسار قائمة */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+/* الجهة اليمين: القصص */
+.stories-feed {
+    flex: 3; /* تأخذ مساحة 75% من العرض */
+}
+
+/* الجهة اليسار: القائمة */
+.sidebar-left {
+    flex: 1; /* تأخذ مساحة 25% من العرض */
+}
+
+.sticky-menu {
+    position: sticky;
+    top: 120px; /* المسافة من أعلى الشاشة عند السكرول */
+    background: var(--bg-textbox); /* استخدمي متغيراتك الداكنة */
+    border: 1px solid var(--color-accent-gold);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.filter-list li button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    text-align: right;
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(226, 193, 101, 0.1);
+    transition: 0.3s;
+}
+
+.filter-list li button:hover {
+    color: var(--color-accent-gold);
+    background: rgba(226, 193, 101, 0.05);
+}

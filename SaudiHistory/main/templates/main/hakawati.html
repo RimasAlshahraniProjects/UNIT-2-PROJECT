@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="hakawati-wrapper">
+    <section class="stories-feed">
+        <div class="txt-box story-item" data-category="battle">
+            <div class="card">
+                <div class="card-body text-end">
+                    <h5 class="gold-text">فتح الرياض والمصمك</h5>
+                    <p class="card-text">
+                        في فجر الخامس من شوال، استعاد الملك عبدالعزيز عاصمة أجداده في ملحمة بطولية...
+                    </p>
+                    <small class="date-tag">١٣١٩ هـ</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="txt-box story-item" data-category="achievement">
+            <div class="card">
+                <div class="card-body text-end">
+                    <h5 class="gold-text">تأسيس هيئة الإغاثة</h5>
+                    <p class="card-text">
+                        إنجاز إنساني يضاف لسجل المملكة الحافل بالعطاء في عهد الملوك...
+                    </p>
+                    <small class="date-tag">تاريخي</small>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <aside class="sidebar-left">
+        <div class="sticky-menu">
+            <h4 class="gold-text">نوع القصة</h4>
+            <ul class="filter-list">
+                <li><button onclick="filterStories('all')">الكل</button></li>
+                <li><button onclick="filterStories('battle')">معركة</button></li>
+                <li><button onclick="filterStories('funny')">طريفة</button></li>
+                <li><button onclick="filterStories('achievement')">إنجاز</button></li>
+                <li><button onclick="filterStories('loss')">خسارة</button></li>
+            </ul>
+        </div>
+    </aside>
+</main>
+{% endblock %}

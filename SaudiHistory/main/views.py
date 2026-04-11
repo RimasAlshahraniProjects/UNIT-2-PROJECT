@@ -50,3 +50,11 @@ def dark_mode_view(request: HttpRequest):
     response.set_cookie("mode", "dark", max_age=-3600 )
     return response
 
+
+
+def quiz_view(request: HttpRequest):
+    return render(request, 'main/quiz.html')
+
+
+def hakawati_view(request: HttpRequest):
+    return render(request, 'main/hakawati.html')

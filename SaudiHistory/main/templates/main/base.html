@@ -56,7 +56,8 @@
     <div class="footer-content">
         <img src="your-logo-path.png" alt="Logo" class="footer-logo">
         <div class="footer-links">
-            <a href="#" class="f-link">حكواتي</a>
+            <a href="{% url 'main:hakawati_view' %}" class="f-link">حكواتي</a>
+            <a href="{% url 'main:quiz_view' %}" class="f-link" >اختبر معلوماتك</a>
             <a href="#"class="f-link">كن بطل القصة</a>
             <a href="#" class="f-link">عبر عن حبك للوطن</a>
     </footer>

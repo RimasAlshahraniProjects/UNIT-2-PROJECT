@@ -32,6 +32,9 @@ urlpatterns=[
     path("mode/light/", views.light_mode_view, name="light_mode_view"),
     path("mode/dark/", views.dark_mode_view, name="dark_mode_view"),
 
+    path('quiz/', views.quiz_view, name='quiz_view'),
+    
+    path('hakawati/', views.hakawati_view, name='hakawati_view'),
    
    
 ]
