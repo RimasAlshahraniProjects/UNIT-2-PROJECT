@@ -918,6 +918,40 @@ html.light_mode main
       background:linear-gradient( #10001f, #376281) !important;
 }
 
+/* ============================================================
+    تجاوب الفوتر مع الأجهزة (Footer Responsive Fix)
+   ============================================================ */
+
+/* التنسيق الخاص بالشاشات المتوسطة والصغيرة (الجوال) */
+@media (max-width: 992px) {
+    .footer-content {
+        flex-direction: column; /* تحويل الترتيب ليكون عمودي */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 180px; /* تصغير اللوجو قليلاً ليناسب الجوال */
+        order: 1; 
+    }
+
+    .footer-links {
+        flex-direction: column; /* الروابط تحت بعض في الجوال لسهولة الضغط */
+        gap: 15px;
+        order: 2;
+    }
+    
+    .site-footer {
+        padding: 40px 20px;
+    }
+}
+
+/* لمسة إضافية لضمان استقامة النص مع الصورة تماماً */
+.f-link {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+}
 
 /* Body Background for Light Mode */
 .light_mode body, 
@@ -1351,4 +1385,276 @@ input[type="radio"] {
     position: relative;
     z-index: 3; /* لضمان ظهور النص فوق كل الطبقات */
     text-align: center;
+}
+
+
+.history-info-section {
+    padding: 100px 0;
+    background-color: #000; /* خلفية سوداء فخمة */
+    color: #fff;
+}
+
+.history-flex-container {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* مسافة كبيرة بين الصورة والنص لراحة العين */
+    flex-wrap: wrap; /* لضمان التجاوب مع الجوال */
+}
+
+.history-image-box {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.fluid-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2)); /* ظل ذهبي خفيف جداً */
+    border-radius: 15px; /* حواف ناعمة جداً وليست حادة */
+}
+
+.history-text-box {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.history-sub-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+}
+
+
+
+.history-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    text-align: justify;
+}
+
+/* للجوال: الصورة تصبح فوق النص */
+@media (max-width: 768px) {
+    .history-flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .history-sub-title::after {
+        margin: 15px auto;
+    }
+}
+
+
+
+/* تنسيق القسم الجديد للدولة الثالثة */
+.state-modern-section {
+    padding: 80px 0;
+    /* يعتمد على خلفيتك الأصلية في center-section */
+}
+
+.state-flex-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap; /* للتجاوب مع الشاشات الصغيرة */
+}
+
+/* تنسيق الصورة (علم الدولة) */
+.state-image-container {
+    flex: 1;
+    min-width: 350px;
+}
+
+.state-flag-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* تأثير إبداعي لرفع جودة الصورة وإبرازها */
+    filter: saturate(1.1) brightness(1.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.state-flag-img:hover {
+    transform: scale(1.03);
+}
+
+/* تنسيق النصوص */
+.state-text-container {
+    flex: 1.5;
+    min-width: 300px;
+    text-align: right;
+}
+
+/* تعزيز الكلاس الموحد pg-titl بلمسة إضافية لهذا القسم فقط */
+.state-text-container .pg-titl {
+    margin-bottom: 30px;
+    display: block;
+}
+
+.description-text {
+    font-size: 1.3rem; /* تكبير الخط ليكون مريحاً للقراءة */
+    line-height: 1.9;
+    color: var(--color-text-main);
+    font-family: var(--font-body);
+    text-align: justify;
+}
+
+/* تحسين العرض على الجوال */
+@media (max-width: 768px) {
+    .state-flex-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .state-text-container {
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* تنسيق القسم الموحد */
+.fixed-split-layout {
+    padding: 60px 0;
+    direction: rtl; /* تأكيد اليمين لليسار */
+}
+
+/* توحيد حجم الصور في كل الأقسام */
+.fixed-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.standard-history-img {
+    /* المقاسات الموحدة التي طلبتِها */
+    width: 100%;
+    max-width: 400px; /* العرض الموحد للصورة */
+    height:auto;    /* الارتفاع الموحد للصورة */
+    
+    object-fit: cover; /* لضمان عدم تمطط الصورة داخل المقاس الموحد */
+    border-radius: 15px; /* حواف ناعمة */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* ظل بسيط للفخامة */
+  
+}
+
+
+/* تنسيق النص الموحد */
+.text-content-area {
+    padding-right: 20px;
+}
+
+.text-content-area .pg-titl {
+    margin-bottom: 25px;
+}
+
+.text-content-area .description-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-text-main); /* سيعتمد على خلفيتك الأصلية */
+    text-align: justify;
+}
+
+/* التجاوب مع الجوال */
+@media (max-width: 768px) {
+    .fixed-split-layout .row {
+        flex-direction: column-reverse; /* الصورة فوق والنص تحت في الجوال */
+    }
+    .text-content-area {
+        padding-right: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+
+
+/* كلاس توحيد طول الكروت */
+.vision-card {
+    background: rgba(255, 255, 255, 0.03); /* خلفية شفافة جداً وفخمة */
+    border: 1px solid var(--border-textbox);
+    border-radius: 20px;
+    height: 100%; /* هذا سيجعل الكرتين بنفس الطول بفضل نظام الـ Row */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding:30px;
+}
+
+.vision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* تنسيق المحتوى ليكون في المنتصف */
+.vision-card-body {
+    text-align: center; /* توسيط العناوين */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* توسيط العناصر أفقياً */
+    height: 100%;
+}
+
+/* تنسيق القائمة */
+.vision-list {
+    list-style: none; /* إزالة النقاط التقليدية */
+    padding: 0;
+    margin: 0;
+    text-align: right; /* بقاء النص يمين للقراءة العربية ولكن القائمة نفسها متمركزة */
+    width: 100%;
+}
+
+.vision-list li {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-right: 20px;
+    position: relative;
+}
+
+/* إضافة نقطة ذهبية مخصصة بدلاً من التقليدية */
+.vision-list li::before {
+    content: "✦";
+    color: var(--color-accent-gold);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* تأكيد لون العنوان الذهبي */
+.gold-text {
+    color: var(--color-accent-gold) !important;
+    font-weight: bold;
+}
+
+
+/* From Uiverse.io by TCdesign-dev */ 
+#bottone1 {
+ padding-left: 33px;
+ padding-right: 33px;
+ padding-bottom: 16px;
+ padding-top: 16px;
+ border-radius: 9px;
+ background: var(--bg-textbox);
+ border:1px solid var(--border-textbox);
+ font-family: var(--font-body);
+ text-align: center;
+ cursor: pointer;
+ transition: 0.4s;
+}
+
+#bottone1:hover {
+ box-shadow: 7px 5px 56px -14px var(--color-accent-gold);
+}
+
+#bottone1:active {
+ transform: scale(0.97);
+ box-shadow: 7px 5px 56px -10px var(--color-accent-gold);
 }
