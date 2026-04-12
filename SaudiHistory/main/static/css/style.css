@@ -1074,3 +1074,53 @@ input[type="radio"] {
     transform: translateY(0); /* يعود لمكانه الأصلي */
     visibility: visible;
 }
+
+
+
+.stories-feed{
+    background: var(--bg-textbox);
+    min-width: 50%;
+    /* تحديد ارتفاع ثابت ضروري لظهور السكرول */
+    max-height: 400px; 
+    overflow-y: auto; /* يظهر السكرول عمودياً فقط عند الحاجة */
+    overflow-x: hidden;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* --- تخصيص شكل السكرول (للـ Chrome, Edge, Safari) --- */
+
+/* 1. عرض السكرول بار */
+#quiz-form,
+.stories-feed::-webkit-scrollbar {
+    width: 6px; /* سكرول نحيف وأنيق */
+}
+
+/* 2. خلفية المسار */
+
+.stories-feed::-webkit-scrollbar-track,
+#quiz-form::-webkit-scrollbar {
+    background: rgba(255, 255, 255, 0.05); 
+    border-radius: 10px;
+}
+
+/* 3. المقبض (الجزء المتحرك) */
+
+.stories-feed::-webkit-scrollbar-thumb,
+#quiz-form::-webkit-scrollbar-track{
+    background: var(--gold-color, #d4af37); /* استخدمي لون الذهب أو الجلو الخاص بكِ */
+    border-radius: 10px;
+}
+
+
+#quiz-form {
+    background: var(--bg-textbox);
+    min-width: 100%;
+    /* تحديد ارتفاع ثابت ضروري لظهور السكرول */
+    max-height: 400px; 
+    overflow-y: auto; /* يظهر السكرول عمودياً فقط عند الحاجة */
+    overflow-x: hidden;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}

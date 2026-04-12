@@ -8,7 +8,7 @@
         <h1 class="pg-titl">اختبر معلوماتك التاريخية</h1>
 
         <div class="filter-group" style="text-align: center; margin-bottom: 40px;">
-            <button class="btn-gold" onclick="filterCategory('all')">الكل (مكس)</button>
+            <button class="btn-gold" onclick="filterCategory('all')">الكل</button>
             <button class="btn-gold" onclick="filterCategory('kings')">الملوك</button>
             <button class="btn-gold" onclick="filterCategory('state1')">الدولة الأولى</button>
             <button class="btn-gold" onclick="filterCategory('state2')">الدولة الثانية</button>
@@ -132,13 +132,13 @@
                 <label><input type="radio" name="s3_5" value="correct"> 23 سبتمبر</label>
                 <label><input type="radio" name="s3_5" value="wrong"> 22 فبراير</label>
             </div>
-
-            <div style="text-align: center;">
-                <button type="button" class="btn-gold" onclick="checkAnswers()">إظهار النتيجة</button>
-            </div>
         </form>
 
-        <div id="result-display" class="text-box" style="display: none; margin-top: 30px; border-color: #0ef; text-align: center;">
+        <div style="text-align: center;">
+                <button type="button" class="btn-gold" onclick="checkAnswers()">إظهار النتيجة</button>
+            </div>
+
+        <div id="result-display" class="text-box" style="display: none; margin-top: 30px; border-color:#d4af37; text-align: center;">
             <h2 class="gold-text">النتيجة النهائية</h2>
             <p id="correct-count"></p>
             <p id="wrong-count"></p>
